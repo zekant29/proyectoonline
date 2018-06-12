@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CetproIca</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="estilos/style.css">
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="main.js"></script>
+	<script>
+		var actual = 0;
+		function puntos(n){
+			var ptn = document.getElementsByClassName('punto');
+			for (i = 0; i<ptn.length; i++) {
+				if (ptn[i].className.includes("activo")) {
+					ptn[i].className = ptn[i].className.replace("activo","");
+					break;
+				}
+			}
+			ptn[n].className += " activo";
+
+		}
+		function mostrar(n){
+			var imagenes = document.getElementsByClassName('imagen');
+			for (i = 0; i< imagenes.length; i++) {
+				if (imagenes[i].className.includes("actual")) {
+					imagenes[i].className = imagenes[i].className.replace("actual","");
+					break;
+				}
+			}
+			actual = n;
+			imagenes[n].className += " actual";
+			puntos(n);	
+		}
+		function siguiente(){
+			actual++;
+			if (actual > 2) {
+				actual = 0;
+			}
+			mostrar(actual);
+		}
+		function anterior(){
+			actual--;
+			if (actual < 0) {
+				actual =2;
+			}
+			mostrar(actual);
+		}
+		var velocidad = 6000;
+		var play = setInterval("siguiente()", velocidad);
+	</script>
+</head>
+<body>
+	<header>
+		<div id="subheader">	
+			<div id="logotipo">
+				<img src="img/logo.png" style="float: left;width: 100px;">
+				<p><a href="index.html">Cetpro Ica</a></p>
+		</div>	
+		<div class="barramenu">
+			<a href="#" class="btn-menu"><span>&#9776;</span><img src="img/logo.png" style="float: left;width: 50px;">CETPRO ICA</a>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="informacion/informacion.html">Nosotros</a></li>
+				<li><a href="carreras/carreras.html">Carreras</a></li>
+				<li><a href="preguntas-frecuentes/pfrecuentes.html">Preguntas Frecuentes</a></li>
+			</ul>
+		</nav>
+		</div>
+	</header>
+	<br>
+	<div class="contenedor">
+		<div class="imagen actual">
+			<img src="img/imagen1.jpg" width="95%">
+			<div class="texto">
+				<h1>Bienvenidos</h1>
+				<p>Centro de Educación Técnico Productiva – Ica</p>
+			</div>
+
+		</div>
+		<div class="imagen">
+			<img src="img/imagen2.jpg" width="95%">
+			<div class="texto2"></div>
+		</div>
+		<div class="imagen">
+			<img src="img/imagen3.jpg" width="95%">
+			<div class="texto3"></div>
+		</div>	
+		<a href="#" class="anterior" onclick="anterior();"></a>
+		<a href="#" class="siguiente" onclick="siguiente();"></a>
+		<div class="puntos">
+			<span class="punto activo" onclick="mostrar(0);"></span>
+			<span class="punto" onclick="mostrar(1);"></span>
+			<span class="punto" onclick="mostrar(2);"></span>		
+		</div>
+	</div>
+	<div class="bienvenida">
+		<h1 class="titulo-1">CETPRO ICA</h1>
+		<hr/>
+		<p>En nombre del Centro de Educación Técnico Productiva – Ica, quiero darles una cordial bienvenida al sitio web de nuestra Institución Educativa y agradecerles el dedicar unos minutos de su tiempo para visitarlo. La vida es como un libro en el cual hay partes escritas y otras que están por escribirse. En cuanto a la Institución se refiere se viene escribiendo año tras año, las vivencias diversas, logros importantes que evidencian el compromiso y el cumplimiento de nuestra MISION, que es Capacitar en Competencias Laborales y el Emprendimiento a Jóvenes y Adultos, en las diferentes especialidades como son: Computación e Informática, Hostelería y Turismo, Confección Textil, Manualidades, Cuero y Calzado, Estética Personal. Servicios Sociales y Asistenciales, Construcción y Mecánica-Metales, para fortalecer la Empleabilidad y Productividad. Asi mismo crear una masa crítica de técnicos que promueva el desarrollo sostenido del país. La Educación es como una llave que abre puertas y ventana de oportunidades.</p>
+	</div>
+	<div class="descubre">
+		<h1 class="titulo-2">DESCUBRE CETPRO ICA</h1>
+	</div>
+	<div class="cont-img">
+		<div class="box">
+			<div class="imgBox">
+				<img src="img/carrera.jpg">
+			</div>
+			<div class="info">
+				<div class="contenido">
+					<h2>Carreras</h2>
+					<p>Mecanica, Jardineria, Electricidad, Construccion, Arte, Confeccion y Moda,etc</p>
+					<br>
+					<a href="carreras/carreras.html">Ver mas</a>
+				</div>
+			</div>
+		</div>
+		<div class="box">
+			<div class="imgBox">
+				<img src="img/informacion.jpg">
+			</div>
+			<div class="info">
+				<div class="contenido">
+					<h2>Nosotros</h2>
+					<p>Formamos Profesionales tecnicos con principios y valores en diversas actividades...</p>
+					<br>
+					<a href="informacion/informacion.html">Ver mas</a>
+				</div>
+			</div>
+		</div>
+		<div class="box">
+			<div class="imgBox">
+				<img src="img/pregunta.jpg">
+			</div>
+			<div class="info">
+				<div class="contenido">
+					<h2>Preguntas</h2>
+					<p>Si tiene alguna duda le invitamos a ver las preguntas frecuentes que nos hacen</p>
+					<a href="preguntas-frecuentes/pfrecuentes.html">Ver mas</a>
+				</div>
+			</div>
+		</div>
+		<div class="box">
+			<div class="imgBox">
+				<img src="img/contacto.png">
+			</div>
+			<div class="info">
+				<div class="contenido">
+					<h2>Contáctanos</h2>
+					<p>Puede Contactarse con nosotros al TELEFONO: xxx-xxxx o  a nuestro EMAIL: xxxx@cetproica.com</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="vide" align="center">
+		<h1>CETPRO-Ica<p> Formando lideres Tecnicos Productivos y emprendedores para el desarrollo Regional y Nacional</p></h1>
+		<embed src="cetproicav.mp4" width="600px" height="360px">
+	</div>
+	<footer>
+		<div class="contendor-all">
+			<div class="contenedor-cuerpo">
+				<div class="colum1">
+					<h1>Redes Sociales</h1>
+					<div class="row">
+						<img src="img/fb.png">
+						<a href="#">Siguenos en Facebook</a>
+					</div>
+					<div class="row">
+						<img src="img/g+.png">
+						<a href="#">Siguenos en G+</a>
+					</div>
+				</div>
+				<div class="colum2">
+					<h1>Información Contactos</h1>
+					<div class="row">
+						<img src="img/house.png">
+						<a href="#">CETPRO-ICA Av.XX-XX</a>
+					</div>
+					<div class="row">
+						<img src="img/mobile.png">
+						<a>XXX-XXX-XXX</a>
+					</div>
+					<div class="row">
+						<img src="img/Gmail.png">
+						<a href="#">Ejemplo99@gmail.com</a>
+					</div>
+				</div>
+				<div class="colum3">
+					<div class="row">
+						<img src="img/logo.png">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="contenedor-footer">
+			<div class="copyright">
+				© 2018 COPYRIGHT <a href="">CETPRO-ICA</a>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

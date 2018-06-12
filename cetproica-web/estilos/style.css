@@ -1,0 +1,402 @@
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{background: #f2f2f2;
+}
+.barramenu{
+	z-index: 999;
+	display: none;
+}
+header{
+	width: 100%;
+}
+header nav{
+	background: #023859;
+	z-index: 999;
+	max-width: 1000px;
+	width: 95%;
+	margin:  auto;
+}
+header nav ul{
+	list-style: none;
+}
+header nav ul li{
+	display: inline-block;
+	position: relative;
+	z-index: 999;
+}
+header nav ul li:hover{
+	background: #fff;
+}
+header nav ul li a{
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	padding: 20px;
+}
+header nav ul li a:hover{color: #023859;}
+#subheader{
+	background: #023859;
+	width: 100%;
+	margin: auto;
+}
+#logotipo{
+	padding-left: 20px;
+}
+ #logotipo a{
+ 	text-decoration: none;
+ 	font-size: 40px;
+ 	color: #fff;
+ 	height: auto;
+ 	font-family: fantasy;
+}
+.contenedor{	
+	position: relative;
+	width: 100%;
+	height: 400px;
+	background-color: #f2f2f2;
+}
+.imagen{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	opacity: 0;
+}
+.imagen img{
+	height: 100%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.texto h1{
+	font-size: 55px;
+	position: absolute;
+	width: 100%;	
+	text-align: center;
+	top: 10%;
+	color: #fff;
+	font-weight: bold;
+}
+.texto p{
+	font-size: 20px;
+	position: absolute;
+	width: 100%;	
+	text-align: center;
+	top: 50%;
+	color: #fff;
+	font-weight: bold;
+}
+.contenedor a{
+	position: absolute;
+	text-decoration: none;
+	color: #fff;
+	font-size: 36px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.puntos {
+	position: absolute;
+	top: 93%;
+	width: 100%;
+	text-align: center;
+}
+.punto{
+	display: inline-block;
+	width: 16px;
+	height: 15px;
+	background-color: #fff;
+	border-radius: 50%	
+}
+.punto:hover{
+	cursor: pointer;
+	background-color: gray;
+}
+.actual{
+	visibility: visible;
+	opacity: 1;
+	transition: visibility 1s, opacity 1s;
+}
+.activo{
+	background-color: gray;
+}
+.bienvenida{
+	width: 100%;
+	margin: 0px;
+}
+.titulo-1{
+	background: #f2f2f2;
+	padding: 30px;
+	text-align: center;
+    color: #313131;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: -7px;
+}
+.bienvenida p{
+	background: #313131;
+	color: #fff;
+	padding: 40px;
+	font-size: 20px;
+	text-align: justify;
+}
+.descubre{
+	width: 100%;
+	margin: 0px;
+}
+.titulo-2{
+	background: #f2f2f2;
+	padding: 30px;
+	text-align: center;
+    color: #313131;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: -7px;
+}
+.cont-img{
+	background: #313131;
+	width: 100%;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.cont-img .box{
+	position: relative;
+	max-width: 500px;
+	height: 350px;
+	background: #000;
+	margin: 20px;
+	margin-left: 30px;
+	box-sizing: border-box;
+	display: inline-block;	
+}
+.cont-img .box .imgBox{
+	position: relative;
+	overflow: hidden;
+}
+.cont-img .box .imgBox img{
+	width: 100%;
+	height: 350px;
+	transition: transform 1s;
+}
+.cont-img .box:hover .imgBox img{
+	transform: scale(1);
+}
+.cont-img .box .info{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	background: rgba(0,0,0,.8);
+	transform: scale(0);
+	transition: transform .5s;
+}
+.cont-img .box:hover .info{
+	transform: scaleY(1);
+}
+.cont-img .box .info .contenido{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	padding: 15px;
+	color: #fff;
+}
+.cont-img .box .info .contenido h2{
+	margin: 10px 0 0;
+	padding: 0;
+	font-size: 30px;
+	color: #fff;
+	width: 100%;	
+	text-align: center;
+	font-weight: bold;
+}
+.cont-img .box .info .contenido p{
+	margin: 10px 0 0;
+	padding: 0;
+}
+.cont-img .box .info .contenido a{
+	margin: 10px 0 0;
+	padding: 0;
+	text-decoration: none;
+	color: #023859;
+	font-family: fantasy;
+	font-size: 20px;
+}
+
+footer{
+	background: #202020;
+	width: 100%;
+	margin: auto;
+	color: #f2f2f2;
+
+}
+.contenedor-all{
+	width: 100%;
+	max-width: 1200px;
+	margin: auto;
+	padding: 40px;
+}
+.contenedor-cuerpo{
+	display: flex;
+	padding: 20px;
+	justify-content: space-between;
+}
+.colum1{
+	max-width: 400px;
+}
+.colum1 h1{
+	font-size: 22px;
+}
+.colum1 .row{
+	margin-top: 20px;
+	display: flex;
+}
+.colum1 .row img{
+	width: 36px;
+	height: 36px;
+}
+.colum1 .row a{
+	margin-top: 10px;
+	margin-left: 20px;
+	color: #C7C7C7;
+	text-decoration: none;
+}
+.colum2{
+	max-width: 400px;
+}
+.colum2 h1{
+	font-size: 22px;
+}
+.colum2 .row{
+	margin-top: 20px;
+	display: flex;
+}
+.colum2 .row img{
+	width: 36px;
+	height: 36px;
+}
+.colum2 .row a{
+	margin-top: 10px;
+	margin-left: 20px;
+	max-width: 100px;
+	color: #C7C7C7;
+	text-decoration: none;
+}
+.colum3{
+	max-width: 400px;
+}
+.colum3 .row{
+	margin-top: 20px;
+	display: flex;
+}
+.colum3 .row img{
+	width: 60px;
+	height: 60px;
+}
+.contenedor-footer{
+	width: 100%;
+	padding: 10px;
+	background: #101010;
+}
+.copyright{
+	color: #C7C7C7;
+}
+.copyright a{
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+}
+.vide{
+	background: #f2f2f2;
+	width: 100%;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.vide h1{
+	margin: auto;
+	width: 600px;
+}
+
+@media screen and (max-width: 800px){
+	body{
+		padding-top: 80px;
+	}
+	#subheader #logotipo{
+		display: none;
+	}
+	.barramenu{
+		display:block;
+		width: 100%;
+		position: fixed; 
+		top:0;	
+		background: #023859;
+	}
+	.barramenu .btn-menu{
+		display: block;
+		padding: 16px;
+		color: #fff;
+		overflow: hidden;
+		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+	.barramenu span{
+		float: right;
+		font-size: 30px;
+	}
+	header nav{
+		width: 80%;
+		height: calc(100% - 80px);
+		position: fixed;
+		z-index: 1001;
+		right: 100%;
+		margin: 0;
+		overflow: scroll;
+	}
+	header nav ul li{
+		display: block;
+		border-bottom: 1px solid rgba(255,255,255,.5);
+	}
+	header nav ul li a{
+		display: block;
+	}
+	.contenedor{
+		width: 100%;
+	}
+	.contenedor .imagen img{
+		width: 100%;
+	}
+	.bienvenida p{
+		padding: 20px;
+		width: 100%;
+	}
+	.descubre .inf-img img{
+		width: 100%;
+	}
+	.cont-img{
+		width: 100%;
+		max-width: 800px;
+	}
+	.cont-img .box{
+		width: 100%;
+	}
+	.contenedor-all{
+		width: 100%;
+		padding: 10px;
+	}
+	.contenedor-cuerpo{
+		display: flex;
+		padding: 20px;	
+	}
+}
